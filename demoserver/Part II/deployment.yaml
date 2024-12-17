@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demoserver
+  template:
+    metadata:
+      labels:
+        app: demoserver
+    spec:
+      initContainers:
+        - name: init-container
+          image: busybox
+          command: ["sh", "-c", "echo 'Initializing data...'"]
+      containers:
+        - name: demoserver
+          image: demoserver:1.0
+          ports:
+            - containerPort: 9300
+          env:
+            - name: CSVSERVER_BORDER
+              value: "Orange"

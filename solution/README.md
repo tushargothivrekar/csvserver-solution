@@ -31,3 +31,21 @@ docker rm demoserver
 9. Create a directory called Part I and move all the files (gencsv.sh, inputdata, part-1-cmd, part-1-output, part-1-logs) into it:
 mkdir "Part I"
 mv gencsv.sh inputdata part-1-cmd part-1-output part-1-logs "Part I/"
+
+# Solution for Part II
+1. Deleted any containers from the previous part:
+docker rm -f demoserver
+
+2. Started Minikube:
+minikube start
+
+3. Created deployment.yaml:
+
+4. Created service.yaml:
+
+5. Created a directory called Part II: 
+    mkdir "Part II"
+    Moved deployment.yaml and service.yaml into the Part II directory:
+    mv deployment.yaml service.yaml "Part II/"
+
+
