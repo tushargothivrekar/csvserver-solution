@@ -1,2 +1,0 @@
-# csvserver-solution
-assignment
